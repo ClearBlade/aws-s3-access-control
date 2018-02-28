@@ -2,7 +2,7 @@
     "author": {
         "email": "rreinold@clearblade.com"
     },
-    asset_types:["Code Services","Collections"],
+    "asset_types":["Code Services","Collections"],
     "clouds": [
         "amazon",
         "aws"
