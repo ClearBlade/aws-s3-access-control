@@ -34,9 +34,15 @@ Fetch the contents of an access-controlled AWS S3 Resource
 
   
 | Param | Type | Description |  
-| --- | --- | --- |  
+|:---:|:---:|:---:|  
 | filename | <code>string</code> | filename associated with a row in aws_s3_resources collection |  
 
+
+| Tables        | Are           | Cool  |
+| ------------- |:-------------:| -----:|
+| **col 3 is**  | right-aligned | $1600 |
+| col 2 is      | *centered*    |   $12 |
+| zebra stripes | ~~are neat~~  |    $1 |
 
 ## Usage
 
