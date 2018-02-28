@@ -11,11 +11,11 @@ This is an ipm package, which contains one or more reusable assets within the ip
 
 ## Setup
 
-### Out of the Box
+### - Out of the Box
 
-This package contains an example S3 Object to fetch.
+This package contains an example S3 Object to fetch, and can be run upon a fresh install. Run `FetchS3Object`
 
-### Integration with Developer's S3 Buckets
+### - Integration with Developer's S3 Buckets
 
 1. Create account: https://aws.amazon.com/documentation/s3/
 2. Upload objects to provide access control upon
@@ -26,7 +26,7 @@ This package contains an example S3 Object to fetch.
 
 <a name="FetchS3Object"></a>
 
-## FetchS3Object(filename) ⇒ <code>string</code>
+#### FetchS3Object(filename) ⇒ <code>string</code>
 Fetch the contents of an access-controlled AWS S3 Resource
 
 **Kind**: global function
