@@ -32,9 +32,10 @@ Fetch the contents of an access-controlled AWS S3 Resource
 **Kind**: global function
 **Returns**: <code>string</code> - content - contents of AWS S3 hosted file
 
-| Param | Type | Description |
-| --- | --- | --- |
-| filename | <code>string</code> | filename associated with a row in aws_s3_resources collection |
+  
+| Param | Type | Description |  
+| --- | --- | --- |  
+| filename | <code>string</code> | filename associated with a row in aws_s3_resources collection |  
 
 
 ## Usage
