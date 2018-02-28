@@ -1,0 +1,26 @@
+{
+    "app_id": "d89eb7a90bd2f8ea92f7baecb647",
+    "collection_id": "d2b1b7a90baeeccdd8a8dbd5d318",
+    "items": [],
+    "name": "aws_s3_resources",
+    "permissions": {
+        "Authenticated": 1
+    },
+    "schema": [
+        {
+            "ColumnName": "item_id",
+            "ColumnType": "uuid",
+            "PK": true
+        },
+        {
+            "ColumnName": "filename",
+            "ColumnType": "string",
+            "PK": false
+        },
+        {
+            "ColumnName": "url",
+            "ColumnType": "string",
+            "PK": false
+        }
+    ]
+}
