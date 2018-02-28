@@ -11,24 +11,43 @@ This is an ipm package, which contains one or more reusable assets within the ip
 
 ## Setup
 
-_Add any setup instructions, such as an API Key_
+### Out of the Box
+
+This package contains an example S3 Object to fetch.
+
+### Integration with Developer's S3 Buckets
+
+1. Create account: https://aws.amazon.com/documentation/s3/
+2. Upload objects to provide access control upon
+3. Place URLs in `aws_s3_resources` collection
+4. Can fetch file contents via the `FetchS3Object` code service
 
 ## API
 
-_Document your API here_
+<a name="FetchS3Object"></a>
+
+## FetchS3Object(filename) ⇒ <code>string</code>
+Fetch the contents of an access-controlled AWS S3 Resource
+
+**Kind**: global function
+**Returns**: <code>string</code> - content - contents of AWS S3 hosted file
+
+| Param | Type | Description |
+| --- | --- | --- |
+| filename | <code>string</code> | filename associated with a row in aws_s3_resources collection |
+
 
 ## Usage
 
-_Describe assets_
+Call `FetchS3Object` as an Authenticated User
 
 ### Code Services
 
-### Code Libraries
-
-### Portals
+`FetchS3Object` - Fetch the contents of an access-controlled AWS S3 Resource
 
 ### Collections
 
+`aws_s3_resources` - Stores key/value pairs of filenames and their respective URLs in AWS S3
 ### ...
 
 ## Thank you
