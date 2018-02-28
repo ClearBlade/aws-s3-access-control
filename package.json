@@ -1,0 +1,36 @@
+{
+    "author": {
+        "email": "rreinold@clearblade.com"
+    },
+    "clouds": [
+        "amazon",
+        "aws"
+    ],
+    "description": "Provide role-based authorization for AWS S3 Buckets and Object",
+    "domains": [
+        "access control"
+    ],
+    "gateways": [],
+    "image_url": "https://assets.pcmag.com/media/images/459145-amazon-s3-logo.jpg",
+    "keywords": [
+        "clearblade",
+        "iot",
+        "platform",
+        "aws",
+        "s3",
+        "storage",
+        "buckets",
+        "access",
+        "control",
+        "amazon"
+    ],
+    "license": "MIT",
+    "name": "aws-s3-access-control",
+    "private": false,
+    "prog_lang": [],
+    "protocols": [
+        "http"
+    ],
+    "things": [],
+    "version": "1.0.0"
+}
