@@ -3,7 +3,7 @@
 
 ## Overview
 
-Provide role-based authorization for AWS S3 Buckets and Object
+Provide role-based authorization for AWSS3. This package helps user to get contents of a file on dropbox using the filename. It assumes the user enters the corresponding {fileName, url} tuple in the collection.
 
 This is an ipm package, which contains one or more reusable assets within the ipm Community. The 'package.json' in this repo is a ipm spec's package.json, [here](https://docs.clearblade.com/v/3/6-ipm/spec), which is a superset of npm's package.json spec, [here](https://docs.npmjs.com/files/package.json).
 
@@ -13,7 +13,7 @@ This is an ipm package, which contains one or more reusable assets within the ip
 
 ### - Out of the Box
 
-This package contains an example S3 Object to fetch, and can be run upon a fresh install. Run `FetchS3Object`
+This package contains an example S3 Object to fetch, and can be run upon a fresh install. Run `AWSS3ExampleFetchAsset`
 
 ### - Integration with Developer's S3 Buckets
 
@@ -22,35 +22,91 @@ This package contains an example S3 Object to fetch, and can be run upon a fresh
 3. Place URLs in `aws_s3_resources` collection
 4. Can fetch file contents via the `FetchS3Object` code service
 
-## API
-
-<a name="FetchS3Object"></a>
-
-#### FetchS3Object(filename) ⇒ <code>string</code>
-Fetch the contents of an access-controlled AWS S3 Resource
-
-**Kind**: global function
-**Returns**: <code>string</code> - content - contents of AWS S3 hosted file
-
-  
-| Param | Type | Description |  
-|:---:|:---:|:---:|  
-| filename | <code>string</code> | filename associated with a row in aws_s3_resources collection |  
-
-
 ## Usage
+The AWSS3Lib provides user with a method to get contents of file using the filename. It does so under the assumption that the file name exists in the collection with a valid Url.
 
-Call `FetchS3Object` as an Authenticated User
+To test call `AWSS3ExampleFetchAsset` with relevant parameters as an Authenticated User.
+
+
+## Assets
 
 ### Code Services
 
-`FetchS3Object` - Fetch the contents of an access-controlled AWS S3 Resource
+* `AWSS3ExampleFetchAsset` - Fetch the contents of an access-controlled AWSS3 Resource. ___Note___: Make sure to initialize ClearBlade Object, before calling the Library methods. i.e. `ClearBlade.init({request:req});`
+
+### Code Libraries
+
+* `AWSS3Lib` - This library provides a method to get file contents from AWSS3 using a filename. It internally uses a collection to get dropbox url for corresponding filename. 
+***Note***: User needs to add a new file, url entry in the collections before trying to access it.
 
 ### Collections
 
-`aws_s3_resources` - Stores key/value pairs of filenames and their respective URLs in AWS S3
-### ...
+* `dropbox_resources` - Stores key/value pairs of filenames and their respective URLs in AWSS3
 
-## Thank you
 
-Powered by ClearBlade Enterprise IoT Platform: [https://platform.clearblade.com](https://platform.clearblade.com)
+## API
+
+## Functions
+
+<dl>
+<dt><a href="#AWSS3ExampleFetchAsset">AWSS3ExampleFetchAsset(fileName)</a> ⇒ <code>string</code></dt>
+<dd><p>Fetch the contents of an access-controlled AWSS3 Resource</p>
+</dd>
+</dl>
+
+## Typedefs
+
+<dl>
+<dt><a href="#AWSS3">AWSS3</a> : <code>Object</code></dt>
+<dd><p>AWSS3 is a file Manager Service Software</p>
+</dd>
+</dl>
+
+<a name="AWSS3ExampleFetchAsset"></a>
+
+## AWSS3ExampleFetchAsset(fileName) ⇒ <code>string</code>
+Fetch the contents of an access-controlled AWSS3 Resource
+
+**Kind**: global function  
+**Returns**: <code>string</code> - content - contents of AWSS3 hosted file  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| fileName | <code>string</code> | filename associated with a row in dropbox_resources collection |
+
+<a name="AWSS3"></a>
+
+## AWSS3 : <code>Object</code>
+AWSS3 is a file Manager Service Software
+
+**Kind**: global typedef  
+
+| Param | Type |
+| --- | --- |
+| collectionName | <code>string</code> | 
+
+**Example**  
+```js
+var dropbox = AWSS3(collectionName);
+```
+<a name="AWSS3.GetFile"></a>
+
+### AWSS3.GetFile : <code>Object</code>
+**Kind**: static typedef of [<code>AWSS3</code>](#AWSS3)  
+
+| Param | Type |
+| --- | --- |
+| fileName | <code>string</code> | 
+| callback | <code>callback</code> | 
+
+**Example**  
+```js
+var dropbox = AWSS3(collectionName);
+ClearBlade.init({request:req}); // Where request has systemKey and systemSecret information
+dropbox.GetFile(fileName, function(err, resp){
+    if(err ){
+      resp.error("Failed to GET File from AWSS3: " + JSON.stringify(err));
+    }
+    resp.success(data);          
+}
+```
