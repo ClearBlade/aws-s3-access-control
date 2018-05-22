@@ -3,6 +3,6 @@
     "dependencies": "http,clearblade",
     "description": "This library simplifies the access to AWS S3 assets.",
     "name": "AWSS3Lib",
-    "version": 23,
+    "version": null,
     "visibility": "system"
 }
