@@ -3,7 +3,7 @@
 
 ## Overview
 
-Provide role-based authorization for AWSS3. This package helps user to get contents of a file on s3 using the filename. It assumes the user enters the corresponding {fileName, url} tuple in the collection.
+Provide role-based authorization for AWS S3. This package helps user to get contents of a file on S3 using the filename. It assumes the user enters the corresponding {fileName, url} tuple in the collection.
 
 This is an ipm package, which contains one or more reusable assets within the ipm Community. The 'package.json' in this repo is a ipm spec's package.json, [here](https://docs.clearblade.com/v/3/6-ipm/spec), which is a superset of npm's package.json spec, [here](https://docs.npmjs.com/files/package.json).
 
@@ -32,7 +32,9 @@ To test call `AWSS3ExampleFetchAsset` with relevant parameters as an Authenticat
 
 ### Code Services
 
-* `AWSS3ExampleFetchAsset` - Fetch the contents of an access-controlled AWSS3 Resource. ___Note___: Make sure to initialize ClearBlade Object, before calling the Library methods. i.e. `ClearBlade.init({request:req});`
+* `AWSS3ExampleFetchAsset` - Fetch the contents of an access-controlled AWSS3 Resource. 
+
+___Note___: Make sure to initialize ClearBlade Object, before calling the Library methods. i.e. `ClearBlade.init({request:req});`
 
 ### Code Libraries
 
