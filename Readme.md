@@ -74,7 +74,7 @@ Fetch the contents of an access-controlled AWSS3 Resource
 
 | Param | Type | Description |
 | --- | --- | --- |
-| fileName | <code>string</code> | filename associated with a row in s3_resources collection |
+| fileName | <code>string</code> | filename associated with a row in aws_s3_resources collection |
 
 <a name="AWSS3"></a>
 

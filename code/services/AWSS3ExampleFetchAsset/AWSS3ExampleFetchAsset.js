@@ -1,13 +1,13 @@
 /**
  * Fetch the contents of an access-controlled AWSS3 Resource
  * 
- * @param {string} fileName - filename associated with a row in s3_resources collection
+ * @param {string} fileName - filename associated with a row in aws_s3_resources collection
  * @returns {string} content - contents of AWSS3 hosted file
  */
 function AWSS3ExampleFetchAsset(req, resp) {
-    const COLLECTION = "s3_resources";
-
-    if (!req.params.fileName || req.params.fileName === "") {
+    const COLLECTION = "aws_s3_resources";
+    const PARAMETERIZED = false
+    if (! req.params.fileName ) {
         req.params.fileName = "s3.txt";
     }
 
