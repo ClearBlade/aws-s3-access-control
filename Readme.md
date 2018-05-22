@@ -45,14 +45,6 @@ To test call `AWSS3ExampleFetchAsset` with relevant parameters as an Authenticat
 
 ## API
 
-## Functions
-
-<dl>
-<dt><a href="#AWSS3ExampleFetchAsset">AWSS3ExampleFetchAsset(fileName)</a> ⇒ <code>string</code></dt>
-<dd><p>Fetch the contents of an access-controlled AWSS3 Resource</p>
-</dd>
-</dl>
-
 ## Typedefs
 
 <dl>
@@ -63,18 +55,6 @@ To test call `AWSS3ExampleFetchAsset` with relevant parameters as an Authenticat
 <dd><p>This callback is displayed as part of sgEmail.</p>
 </dd>
 </dl>
-
-<a name="AWSS3ExampleFetchAsset"></a>
-
-## AWSS3ExampleFetchAsset(fileName) ⇒ <code>string</code>
-Fetch the contents of an access-controlled AWSS3 Resource
-
-**Kind**: global function  
-**Returns**: <code>string</code> - content - contents of AWSS3 hosted file  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| fileName | <code>string</code> | filename associated with a row in aws_s3_resources collection |
 
 <a name="AWSS3"></a>
 
