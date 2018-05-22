@@ -3,7 +3,7 @@
 
 ## Overview
 
-Provide role-based authorization for AWSS3. This package helps user to get contents of a file on dropbox using the filename. It assumes the user enters the corresponding {fileName, url} tuple in the collection.
+Provide role-based authorization for AWSS3. This package helps user to get contents of a file on s3 using the filename. It assumes the user enters the corresponding {fileName, url} tuple in the collection.
 
 This is an ipm package, which contains one or more reusable assets within the ipm Community. The 'package.json' in this repo is a ipm spec's package.json, [here](https://docs.clearblade.com/v/3/6-ipm/spec), which is a superset of npm's package.json spec, [here](https://docs.npmjs.com/files/package.json).
 
@@ -36,13 +36,12 @@ To test call `AWSS3ExampleFetchAsset` with relevant parameters as an Authenticat
 
 ### Code Libraries
 
-* `AWSS3Lib` - This library provides a method to get file contents from AWSS3 using a filename. It internally uses a collection to get dropbox url for corresponding filename. 
+* `AWSS3Lib` - This library provides a method to get file contents from AWSS3 using a filename. It internally uses a collection to get s3 url for corresponding filename. 
 ***Note***: User needs to add a new file, url entry in the collections before trying to access it.
 
 ### Collections
 
-* `dropbox_resources` - Stores key/value pairs of filenames and their respective URLs in AWSS3
-
+* `s3_resources` - Stores key/value pairs of filenames and their respective URLs in AWSS3
 
 ## API
 
@@ -58,7 +57,10 @@ To test call `AWSS3ExampleFetchAsset` with relevant parameters as an Authenticat
 
 <dl>
 <dt><a href="#AWSS3">AWSS3</a> : <code>Object</code></dt>
-<dd><p>AWSS3 is a file Manager Service Software</p>
+<dd><p>AWS S3 is a file Manager Service Software</p>
+</dd>
+<dt><a href="#callback">callback</a> : <code>function</code></dt>
+<dd><p>This callback is displayed as part of sgEmail.</p>
 </dd>
 </dl>
 
@@ -72,12 +74,12 @@ Fetch the contents of an access-controlled AWSS3 Resource
 
 | Param | Type | Description |
 | --- | --- | --- |
-| fileName | <code>string</code> | filename associated with a row in dropbox_resources collection |
+| fileName | <code>string</code> | filename associated with a row in s3_resources collection |
 
 <a name="AWSS3"></a>
 
 ## AWSS3 : <code>Object</code>
-AWSS3 is a file Manager Service Software
+AWS S3 is a file Manager Service Software
 
 **Kind**: global typedef  
 
@@ -87,7 +89,7 @@ AWSS3 is a file Manager Service Software
 
 **Example**  
 ```js
-var dropbox = AWSS3(collectionName);
+var s3 = AWSS3(collectionName);
 ```
 <a name="AWSS3.GetFile"></a>
 
@@ -97,16 +99,28 @@ var dropbox = AWSS3(collectionName);
 | Param | Type |
 | --- | --- |
 | fileName | <code>string</code> | 
-| callback | <code>callback</code> | 
+| callback | [<code>callback</code>](#callback) | 
 
 **Example**  
 ```js
-var dropbox = AWSS3(collectionName);
+var s3 = AWSS3(collectionName);
 ClearBlade.init({request:req}); // Where request has systemKey and systemSecret information
-dropbox.GetFile(fileName, function(err, resp){
+s3.GetFile(fileName, function(err, resp){
     if(err ){
       resp.error("Failed to GET File from AWSS3: " + JSON.stringify(err));
     }
     resp.success(data);          
 }
 ```
+<a name="callback"></a>
+
+## callback : <code>function</code>
+This callback is displayed as part of sgEmail.
+
+**Kind**: global typedef  
+
+| Param | Type |
+| --- | --- |
+| err | <code>Object</code> | 
+| resp | <code>Object</code> | 
+

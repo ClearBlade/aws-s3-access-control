@@ -1,0 +1,12 @@
+{
+    "current_version": 1,
+    "dependencies": "clearblade,http,AWSS3Lib",
+    "logging_enabled": "false",
+    "name": "AWSS3ExampleFetchAsset",
+    "params": [],
+    "permissions": {
+        "Authenticated": 1
+    },
+    "run_user": "",
+    "source": "AWSS3ExampleFetchAsset.js"
+}
