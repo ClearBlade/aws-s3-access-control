@@ -39,7 +39,7 @@ ___Note___: Make sure to initialize ClearBlade Object, before calling the Librar
 ### Code Libraries
 
 * `AWSS3Lib` - This library provides a method to get file contents from AWSS3 using a filename. It internally uses a collection to get s3 url for corresponding filename. 
-***Note***: User needs to add a new file, url entry in the collections before trying to access it.
+***Note***: User needs to add a new file entry in the collections before trying to access it.
 
 ### Collections
 
