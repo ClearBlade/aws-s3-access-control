@@ -47,7 +47,7 @@ ___Note___: Make sure to initialize ClearBlade Object, before calling the Librar
 
 ## API
 
-## Typedefs
+### Typedefs
 
 <dl>
 <dt><a href="#AWSS3">AWSS3</a> : <code>Object</code></dt>
@@ -60,7 +60,7 @@ ___Note___: Make sure to initialize ClearBlade Object, before calling the Librar
 
 <a name="AWSS3"></a>
 
-## AWSS3 : <code>Object</code>
+### AWSS3 : <code>Object</code>
 AWS S3 is a file Manager Service Software
 
 **Kind**: global typedef  
@@ -70,12 +70,12 @@ AWS S3 is a file Manager Service Software
 | collectionName | <code>string</code> | 
 
 **Example**  
-```
+```js
 var s3 = AWSS3(collectionName);
 ```
 <a name="AWSS3.GetFile"></a>
 
-### AWSS3.GetFile : <code>Object</code>
+#### AWSS3.GetFile : <code>Object</code>
 **Kind**: static typedef of [<code>AWSS3</code>](#AWSS3)  
 
 | Param | Type |
@@ -84,7 +84,7 @@ var s3 = AWSS3(collectionName);
 | callback | [<code>callback</code>](#callback) | 
 
 **Example**  
-```
+```js
 var s3 = AWSS3(collectionName);
 ClearBlade.init({request:req});
 s3.GetFile(fileName, function(err, resp){
@@ -96,7 +96,7 @@ s3.GetFile(fileName, function(err, resp){
 ```
 <a name="callback"></a>
 
-## callback : <code>function</code>
+### callback : <code>function</code>
 This callback is displayed as part of sgEmail.
 
 **Kind**: global typedef  

@@ -25,7 +25,7 @@ function AWSS3(collectionName) {
      * 
      * @example  
      * var s3 = AWSS3(collectionName);
-     * ClearBlade.init({request:req}); // Where request has systemKey and systemSecret information
+     * ClearBlade.init({request:req});
      * s3.GetFile(fileName, function(err, resp){
      *     if(err ){
      *       resp.error("Failed to GET File from AWSS3: " + JSON.stringify(err));
