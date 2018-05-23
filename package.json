@@ -8,7 +8,7 @@
     "devDependencies": {
         "jsdoc-to-markdown": "^4.0.1"
     },
-    "asset_types":["Code Services","Collections"],
+    "asset_types":["Code Libraries","Collections"],
     "clouds": [
         "amazon",
         "aws"
