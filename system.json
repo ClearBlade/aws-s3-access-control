@@ -2,7 +2,7 @@
     "auth": true,
     "description": "",
     "messaging_url": "staging.clearblade.com:1883",
-    "name": "packagedevawss3",
+    "name": "aws-s3-access-control",
     "platform_url": "https://staging.clearblade.com",
     "system_key": "d89eb7a90bd2f8ea92f7baecb647",
     "system_secret": "D89EB7A90BB4FCC5F7A7ACDDA0E301"

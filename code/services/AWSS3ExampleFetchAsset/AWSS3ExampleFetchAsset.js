@@ -6,7 +6,6 @@
  */
 function AWSS3ExampleFetchAsset(req, resp) {
     const COLLECTION = "aws_s3_resources";
-    const PARAMETERIZED = false
     if (! req.params.fileName ) {
         req.params.fileName = "s3.txt";
     }
