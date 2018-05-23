@@ -70,7 +70,7 @@ AWS S3 is a file Manager Service Software
 | collectionName | <code>string</code> | 
 
 **Example**  
-```js
+```
 var s3 = AWSS3(collectionName);
 ```
 <a name="AWSS3.GetFile"></a>
@@ -84,9 +84,9 @@ var s3 = AWSS3(collectionName);
 | callback | [<code>callback</code>](#callback) | 
 
 **Example**  
-```js
+```
 var s3 = AWSS3(collectionName);
-ClearBlade.init({request:req}); // Where request has systemKey and systemSecret information
+ClearBlade.init({request:req});
 s3.GetFile(fileName, function(err, resp){
     if(err ){
       resp.error("Failed to GET File from AWSS3: " + JSON.stringify(err));
